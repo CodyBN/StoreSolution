@@ -21,9 +21,17 @@ dotnet tool install --global dotnet-ef
 
 Make sure you run the following from the root of the StoreApi project in the StoreSolution.
 
-- Update the connection string in ```appsettings.json```
+- Restore Nuget Packages
 ```
-"DefaultConnection": "Server=localhost;Database=StoreDb;Trusted_Connection=True;"
+dotnet restore
+```
+- Restore local tools
+```
+dotnet tool restore
+```
+- Run database migration
+```
+dotnet tool run dotnet-ef database update
 ```
 - Apply migrations
 ```
