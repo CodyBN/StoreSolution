@@ -11,6 +11,8 @@ obj/
 
 # Node modules (if you have any front-end projects)
 node_modules/
+dist/
+.angular/
 
 # Rider/Resharper
 .idea/
