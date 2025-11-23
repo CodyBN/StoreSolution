@@ -25,14 +25,7 @@ Make sure you run the following from the root of the StoreApi project in the Sto
 ```
 dotnet restore
 ```
-- Restore local tools
-```
-dotnet tool restore
-```
-- Run database migration
-```
-dotnet tool run dotnet-ef database update
-```
+This step may not be needed. You can try running the API Solution now in vs studio
 - Apply migrations
 ```
 dotnet ef database Update
