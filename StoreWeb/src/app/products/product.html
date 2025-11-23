@@ -1,0 +1,29 @@
+<div class="product-list">
+      <h2>Products</h2>
+
+      <div *ngIf="errorMessage() as msg" class="error" role="alert">{{ msg }}</div>
+
+      <table *ngIf="products().length > 0; else noProducts" class="product-table" aria-describedby="productListDesc">
+        <caption id="productListDesc" class="sr-only">List of products with price, category and stock</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products()" class="product-row">
+            <td class="name"><strong>{{ p.name }}</strong></td>
+            <td class="price">{{ p.price | currency }}</td>
+            <td class="category">{{ p.categoryName }}</td>
+            <td class="stock">{{ p.stockQuantity }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noProducts>
+        <p class="no-products">No products found.</p>
+      </ng-template>
+    </div>
