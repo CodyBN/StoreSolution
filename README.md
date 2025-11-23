@@ -44,7 +44,7 @@ npm Install
 ```
 - Run Angular dev server:
 ```
-ng server
+ng serve
 ```
 - Navigate to 
 ```
